@@ -15,26 +15,61 @@
 
 // "my phone number is 182763" - another posible solution do we account for spaces
 
-function charCount(str){
+// function charCount(str){
+//     //make object to return at the end
+//     let result = {};
+//     //loop over string, for each character
+//     for(let i = 0; i < str.length; i++){
+//         //lower case string
+//         let char = str[i].toLowerCase();
+//         //check if alpha numerirc spaces or dashes 
+//         if(/[a-z0-9]/.test(char)){
+//         //if char is a numbers/letter And is a key object, and one to count
+//         if(result[char] > 0){
+//             result[char]++;
+//         //If the char is number/letter And not in object, add it to the object and set value to 1
+//         }else {
+//             result[char] = 1;
+//             }
+//         }
+//     }
+//     //return a object at end..
+//      return result;
+//     }
+
+
+// --------------------------- REFACTORING CODE -----------------
+
+function charCount(str) {
     //make object to return at the end
     let result = {};
-    //loop over string, for each character
-    for(let i = 0; i < str.length; i++){
-        let char = str[i].toLowerCase();
-        //if char is a numbers/letter And is a key object, and one to count
-        if(result[char] > 0){
-            result[char]++;
+    //used for of loop instead
+    for (let char of str)
+        //check if alpha numerirc spaces or dashes with isAplphaNumeric function
+        if (isAlphaNumeric(char)) {
+            //lower case string
+            char = char.toLowerCase();
+            //if char is a numbers/letter And is a key object, and one to count
+          result[char] = ++result[char] || 1
         }
-        //If the char is number/letter And not in object, add it to the object and set value to 1
-        else{
-            result[char] = 1;
-        };
     }
+    //return a object at end..
     return result;
 }
-//if character is something else (space, period, ect. ) dont do anyting
-//return a object at end..
+// this function replaces reg expression should be faster
+function isAlphaNumeric(char){
+    let code = char.charCodeAt(0);
+    if(!(code > 47 && code < 58) &&
+       !(code > 64 && code < 91) &&
+       !(code > 96 && code < 123)){
+        return false;
+       }
+     return true; 
+}
+
 console.log(charCount("Hello world"))
+console.log(charCount("Hello-2.0"))
+
 
 //REFACTORING QUESITONS
 // * Can you check the result
