@@ -52,10 +52,10 @@ function charCount(str) {
             //if char is a numbers/letter And is a key object, and one to count
           result[char] = ++result[char] || 1
         }
+         //return a object at end.
         return result;
     }
-    //return a object at end..
-
+   
 // this function replaces reg expression should be faster
 function isAlphaNumeric(char){
     let code = char.charCodeAt(0);
