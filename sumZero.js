@@ -18,7 +18,7 @@ function sumZeroSlow(arr){
         }
     }
 }
-console.log(sumZeroSlow([-4,-3,-2,-1,0,1,2,5]))
+console.log(sumZeroSlow([-4, -3, -2, -1, 0, 1, 2, 5])) //[-2, 2]
 
 
 //Time Complexity - O(N)
@@ -37,5 +37,5 @@ function sumZero(arr){
         }
     }
 }
-console.log(sumZero([-4, -3, -2, -1, 0, 1, 2, 5]))
+console.log(sumZero([-4, -3, -2, -1, 0, 1, 2, 5]))//[-2, 2]
 
