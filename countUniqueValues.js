@@ -6,12 +6,12 @@ can be negative numbers in the array, but will alwasy be sorted */
 // Time Complexity - O(N)
 // Space Complexity - O(1)
 function countUniqueValues(arr){
-    if(arr.length === 0 ) return 0;
-    let i = 0;
+    if(arr.length === 0 ) return 0;// if array is empty returns "0" 
+    let i = 0;// strats at index 0 
     for(let j = 1; j < arr.length; j++){
-        if(arr[i] !== arr[j]){
-            i++;
-            arr[i] = arr[j]
+        if(arr[i] !== arr[j]){ // compares array numbers if equal
+            i++; // increments values if not equal
+            arr[i] = arr[j] // 
         }
     }
     return i + 1
