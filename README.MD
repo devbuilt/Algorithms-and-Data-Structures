@@ -22,4 +22,4 @@
 ### 2. What are the inputs that go into the problem?
 ### 3. What are the outpust that should come from the solution to the problem?
 ### 4. Can the ouputs be determined from the inputs? In the other words, do I have enough information to solve the problem?(You may not be able to answer the question until you set about solving the problem. Thas okay; its still worth considering the question at this early stage.)
-### 5. How should I label the importance pieces of data that are a part of the problem?
+### 5. How should I lable the importance pieces of data that are a part of the problem?
