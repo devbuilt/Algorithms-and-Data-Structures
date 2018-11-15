@@ -11,9 +11,9 @@ function factorial(num){
 console.log(factorial(5)); // 120
 
 //Recursion Solution
-function factorial(num){
-    if(num === 1) return 1;
-    return num * factorial(num - 1)
+function factorialRecursion(nums){
+    if(nums === 1) return 1;
+    return nums * factorial(nums - 1)
 }
 
-console.log(factorial(5)); // 120
+console.log(factorialRecursion(5)); // 120
