@@ -9,22 +9,19 @@ Example:
 
 
  */
-
 // This function accepts an array and a value
- function linearSearch(arr,val){
+ function linearSearch(arr, val){
 // loop through the array and check if the
-    for(let i = 0; i <arr.length; i++){
+    for(let i = 0; i < arr.length; i++){
         // current array element is equal to the value
-        if(arr[i] == val){
-            return i;//if it is, return the index at which the element is found
+        if(arr[i] === val)return i;//if it is, return the index at which the element is found
         }
         return -1;// if the value is never found, return -1
-    }
-
+    
  }
-
+//O(N)
  console.log(linearSearch([10,15,25,30],15))
- console.log(linearSearch([9,8,7,6,5,4,3,2,1,0],4))
+ console.log(linearSearch([9,8,7,6,5,4,3,2,1,0], 4))
  console.log(linearSearch([100],100))
  console.log(linearSearch([9,8,7,6,5,4,3,2,1,0],10))
  console.log(linearSearch([100],200))
