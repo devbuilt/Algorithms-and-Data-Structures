@@ -4,18 +4,19 @@ of all even numbers in an obeject which may contain objects
  */
 
 
-function nestedEvenSum (obj) {
-    // add whatever parameters you deem necessary - good luck!
-    //Look up keys
-    let num = Object.values(obj)
+function nestedEvenSum (obj, sum=0) {
+    // for in loop
+    for(let key in obj){
     //typeof
-    //if statement
-    //check is even
-    //
-
-    console.log(num)
+      if(typeof obj[key] === 'object'){
+      sum += nestedEvenSum(obj[key]);
+    }else if(typeof obj[key] === 'number' && obj[key] % 2 === 0){
+      sum+= obj[key]
+    }
 
   }
+  return sum;
+}
   
   
   var obj1 = {
@@ -38,5 +39,5 @@ function nestedEvenSum (obj) {
     e: {e: {e: 2}, ee: 'car'}
   };
   
-  nestedEvenSum(obj1); // 6
-  nestedEvenSum(obj2); // 10
+ console.log(nestedEvenSum(obj1)); // 6
+ console.log(nestedEvenSum(obj2)); // 10
