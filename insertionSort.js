@@ -3,7 +3,7 @@
 /* Continue to the next element and if it is in the correct order, iterate through
     the sorted portion(i.e the left side) to place the element in the correct place*/
 /* Repat unitl the array is sorted*/
-
+// Big O Complexity O(1) 
 function insertionSort(arr){
     var currentVal;
     for(var i = 1; i < arr.length; i++){
