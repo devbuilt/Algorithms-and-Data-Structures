@@ -17,7 +17,7 @@ function binarySearch(arr, elem) {
     if(arr[middle] === elem){
         return middle;
     }
-    return -1;
+    return 'No Match Found';
 }
 console.log(binarySearch([10,15,25,30],15))
 console.log(binarySearch([9,8,7,6,5,4,3,2,1,0], 4))
@@ -35,7 +35,7 @@ function binarySearchRefactored(arr, elem) {
         else start = middle + 1;
         middle = Math.floor((start + end) / 2);
     }
-    return arr[middle] === elem ? middle : -1;
+    return arr[middle] === elem ? middle : 'No Match Found';
 }
 
-console.log(binarySearchRefactored([2,5,6,9,13,15,28,30], 103))
+console.log(binarySearchRefactored([2,5,6,9,13,15,28,30], 102))
