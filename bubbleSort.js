@@ -14,9 +14,11 @@ function swap1(arr, index1, index2){
  console.log(swap(1,2,4,3,8))
 
  
- 
+ //Time complexity O(N)
  function bubelSort(arr){
+     let noSwaps; // optimizing
     for(let i = arr.length; i > 0; i--){
+        noSwaps = true;
         for(let j = 0; j < i - 1; j++){
             console.log(arr, arr[j], arr[j+1])
             if(arr[j] > arr[j + 1]){
@@ -24,8 +26,10 @@ function swap1(arr, index1, index2){
                 let temp = arr[j];
                 arr[j] = arr[j+1]
                 arr[j+1] = temp;
+                noSwaps = false;
             }
         }
+        if(noSwaps) break;
         console.log('ONE PASS COMPLETE')
     }
     return arr;
