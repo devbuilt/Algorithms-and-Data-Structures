@@ -16,7 +16,7 @@ Example:
         // current array element is equal to the value
         if(arr[i] === val)return i;//if it is, return the index at which the element is found
         }
-        return -1;// if the value is never found, return -1
+    return -1;// if the value is never found, return -1
     
  }
 //O(N)
