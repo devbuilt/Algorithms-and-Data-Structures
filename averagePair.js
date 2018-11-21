@@ -18,7 +18,7 @@ function averagePair(arr, num){
        else if (avg < num) start++
        else end--
    }
-   return false
+   return false;
 }
 
 console.log(averagePair([1, 2, 3], 2, 5)) // true
