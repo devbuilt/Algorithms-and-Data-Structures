@@ -4,14 +4,14 @@ function swap1(arr, index1, index2){
     arr[index2] = temp;
  }
 
- console.log(swap1(5,4,2,9))
+ swap1(5,4,2,9)
 
 
  const swap = (arr, index1, index2) => {
      [arr[index1],arr[index2]] = [arr[index2],arr[index1]];
  }
 
- console.log(swap(1,2,4,3,8))
+ swap(1,2,4,3,8)
 
  /* Start looping from with a variable called i the end of
  the array towards the beginning 

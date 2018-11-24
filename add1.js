@@ -6,6 +6,7 @@ function addUpTo(n){
     for(let i = 1; i <= n; i++){
         //add upp to total += i
         total += i
+       
     }
     return total;
 }
