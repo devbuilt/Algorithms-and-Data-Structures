@@ -36,7 +36,7 @@ function merge(arr1, arr2){
     }
     return results;
 }
-// console.log(merge([1,10,50], [2,14,99,100]))
+console.log(merge([1,10,50], [2,14,99,100]))
 
 
 function mergeSort(arr){
