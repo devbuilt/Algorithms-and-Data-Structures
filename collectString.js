@@ -18,7 +18,7 @@ function collectStrings(obj) {
     }
  
     gatherStrings(obj);
- 
+
     return stringsArr;
 }
 
