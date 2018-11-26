@@ -6,8 +6,7 @@ console.log(getDigit(7323, 2))
 
 //Helper function counts digits
 function digitCount(num){
-    if(num === 0 ) return 1;
-    return Math.floor(Math.log(Math.abs(num))) + 1
+    return (num === 0 ? 1 : Math.floor(Math.log(Math.abs(num))) + 1);
 }
 console.log(digitCount(423))
 
@@ -25,7 +24,7 @@ console.log(mostDigits([23,576]))
 // figure out how many digits the largest number has
 // loop from k = 0 up to this largest number of digits
 // for each iteration of the loop
-// create bucets for each digit (0 to 9 )
+// create buckets for each digit (0 to 9 )
 // place each number in the corresponding bucket based on the kth digit
 // Replace our exisiting array with values in our buckets
 // starting with 0 and going up to 9 
