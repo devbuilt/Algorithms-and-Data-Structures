@@ -8,3 +8,11 @@ function sumTwoLowestNumbers(numbers){
 
 console.log(sumTwoLowestNumbers([45,34,7,-1]))
 
+function smallestIntegerFinder(number) {
+    let min = number.sort((a,b) => a - b)
+    return min[0]
+}
+
+
+console.log(smallestIntegerFinder([34, 15, 88, 2]))
+console.log(smallestIntegerFinder([34, -345, -1, 100]))
