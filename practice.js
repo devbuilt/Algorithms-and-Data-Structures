@@ -435,3 +435,18 @@ console.log(dbSort([1, 2, 3, 4, 5]))
 console.log(dbSort(["Banana", "Orange", "Apple", "Mango","1", 0, 2, 2]))
 console.log(dbSort(["C", "W", "W", "W", 1, 2, 0]))
 
+function helpZoom(numbers) {
+   
+    for (var num = 0; num < numbers.length + 1; num++) {
+        if ((numbers[num] === numbers[num])) {
+            return "Yes"
+        }else{
+            return "NO"
+        }
+       
+    }
+    
+}
+
+console.log(helpZoom([1, 1, 0, 0, 0, 0, 0, 1, 1]))//, "Yes")
+console.log(helpZoom([1, 1, 0, 0, 0, 0, 1, 1, 0]))

@@ -47,7 +47,7 @@ for (var [id, count] of idsToOccurrences) {
  */
 function findUniqueDeliveryId(deliveryIds) {
 
-var uniqueDeliveryId = 0;
+let uniqueDeliveryId = 0;
 
 deliveryIds.forEach(function (deliveryId) {
     uniqueDeliveryId ^= deliveryId;
