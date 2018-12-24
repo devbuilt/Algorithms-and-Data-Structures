@@ -7,4 +7,5 @@ function accum(string) {
     }
     return result.join("-") // join string and add "-"
 }
-console.log(accum("ZpglnRxqenU"), "Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu")
+console.log(accum("ZpglnRxqenU"))
+

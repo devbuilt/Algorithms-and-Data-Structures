@@ -422,36 +422,86 @@
 // console.log(spEng("")
 
 
-function dbSort(a) {
-    let nums = a.filter(x => x !== x.toString()).sort((a, b) => a - b)
-    let strs = a.filter(y => y === y.toString()).sort()
-    return nums.concat(strs)
-}
+// function dbSort(a) {
+//     let nums = a.filter(x => x !== x.toString()).sort((a, b) => a - b)
+//     let strs = a.filter(y => y === y.toString()).sort()
+//     return nums.concat(strs)
+// }
 
+// console.log(dbSort([6, 2, 3, 4, 5]))
+// console.log(dbSort([14, 32, 3, 5, 5]))  
+// console.log(dbSort([1, 2, 3, 4, 5]))
+// console.log(dbSort(["Banana", "Orange", "Apple", "Mango","1", 0, 2, 2]))
+// console.log(dbSort(["C", "W", "W", "W", 1, 2, 0]))
 
-console.log(dbSort([6, 2, 3, 4, 5]))
-console.log(dbSort([14, 32, 3, 5, 5]))  
-console.log(dbSort([1, 2, 3, 4, 5]))
-console.log(dbSort(["Banana", "Orange", "Apple", "Mango","1", 0, 2, 2]))
-console.log(dbSort(["C", "W", "W", "W", 1, 2, 0]))
+// function helpZoom(_arr1, _arr2) {
+  
+//     if (!Array.isArray(_arr1) || !Array.isArray(_arr2) || _arr1.length !== _arr2.length)
+//       return false;
 
-function helpZoom(_arr1, _arr2) {
-  if (!Array.isArray(_arr1) || !Array.isArray(_arr2) || _arr1.length !== _arr2.length)
-      return false;
+//   var arr1 = _arr1.concat().sort();
+//   var arr2 = _arr2.concat().sort();
 
-  var arr1 = _arr1.concat().sort();
-  var arr2 = _arr2.concat().sort();
+//   for (var i = 0; i < arr1.length; i++) {
 
-  for (var i = 0; i < arr1.length; i++) {
+//       if (arr1[i] !== arr2[i])
+//           return "No";
 
-      if (arr1[i] !== arr2[i])
-          return "No";
+//   }
 
-  }
-
-  return "Yes";
-}
+//   return "Yes";
+// }
     
 
-console.log(helpZoom([1, 1, 0, 0, 0, 0, 0, 1, 1], [1, 1, 0, 0, 0, 0, 0, 1, 0])) //, "Yes")
+// console.log(helpZoom([1, 1, 0, 0, 0, 0, 0, 1, 1], [1, 1, 0, 0, 0, 0, 0, 1, 1])) //, "Yes")
 
+
+// function bald(x) {
+// if(x === x){
+//     return "Unicorn!"
+// }
+// }
+
+// console.log(bald('/---------'))
+// console.log(bald('/-----/-'))
+// console.log(bald('--/--/---/-/---'))
+
+
+
+// function whatday(num) { 
+//     if(num < 1 || num > 7){return" Wrong, please enter a number between 1 and 7"}
+//     else if(num === 1){return "Sunday"}
+//     else if(num === 2){return "Monday"}
+//     else if(num === 3){return "Tuesday"}
+//     else if(num === 4){return "Wednesday"}
+//     else if(num === 5){return "Thursday"}
+//     else if(num === 6){return "Firday"}
+//     else if(num === 7){return "Saturday"}
+//   }
+//   console.log(whatday(1))
+//   console.log(whatday(2))
+//   console.log(whatday(3))
+//   console.log(whatday(8))
+
+  function enough(cap, on, wait) {
+    if(on + wait< cap){
+        return 0
+    }else{
+        return (on + wait) - cap
+    }
+  }
+
+  console.log(enough(10, 5, 5))
+  console.log(enough(100, 60, 50))
+
+
+  
+  function check(a,x){
+  for(let i = 0; i < a.length; i++){
+      if(a[i] === x){
+          return true
+      }
+  }
+  return false
+};
+    check([65,44],65)//?
