@@ -422,49 +422,49 @@
 // console.log(spEng("")
 
 
-// function dbSort(a) {
-//     let nums = a.filter(x => x !== x.toString()).sort((a, b) => a - b)
-//     let strs = a.filter(y => y === y.toString()).sort()
-//     return nums.concat(strs)
-// }
+// // function dbSort(a) {
+// //     let nums = a.filter(x => x !== x.toString()).sort((a, b) => a - b)
+// //     let strs = a.filter(y => y === y.toString()).sort()
+// //     return nums.concat(strs)
+// // }
 
-// console.log(dbSort([6, 2, 3, 4, 5]))
-// console.log(dbSort([14, 32, 3, 5, 5]))  
-// console.log(dbSort([1, 2, 3, 4, 5]))
-// console.log(dbSort(["Banana", "Orange", "Apple", "Mango","1", 0, 2, 2]))
-// console.log(dbSort(["C", "W", "W", "W", 1, 2, 0]))
+// // console.log(dbSort([6, 2, 3, 4, 5]))
+// // console.log(dbSort([14, 32, 3, 5, 5]))  
+// // console.log(dbSort([1, 2, 3, 4, 5]))
+// // console.log(dbSort(["Banana", "Orange", "Apple", "Mango","1", 0, 2, 2]))
+// // console.log(dbSort(["C", "W", "W", "W", 1, 2, 0]))
 
-// function helpZoom(_arr1, _arr2) {
+// // function helpZoom(_arr1, _arr2) {
   
-//     if (!Array.isArray(_arr1) || !Array.isArray(_arr2) || _arr1.length !== _arr2.length)
-//       return false;
+// //     if (!Array.isArray(_arr1) || !Array.isArray(_arr2) || _arr1.length !== _arr2.length)
+// //       return false;
 
-//   var arr1 = _arr1.concat().sort();
-//   var arr2 = _arr2.concat().sort();
+// //   var arr1 = _arr1.concat().sort();
+// //   var arr2 = _arr2.concat().sort();
 
-//   for (var i = 0; i < arr1.length; i++) {
+// //   for (var i = 0; i < arr1.length; i++) {
 
-//       if (arr1[i] !== arr2[i])
-//           return "No";
+// //       if (arr1[i] !== arr2[i])
+// //           return "No";
 
-//   }
+// //   }
 
-//   return "Yes";
-// }
+// //   return "Yes";
+// // }
     
 
-// console.log(helpZoom([1, 1, 0, 0, 0, 0, 0, 1, 1], [1, 1, 0, 0, 0, 0, 0, 1, 1])) //, "Yes")
+// // console.log(helpZoom([1, 1, 0, 0, 0, 0, 0, 1, 1], [1, 1, 0, 0, 0, 0, 0, 1, 1])) //, "Yes")
 
 
-// function bald(x) {
-// if(x === x){
-//     return "Unicorn!"
-// }
-// }
+// // function bald(x) {
+// // if(x === x){
+// //     return "Unicorn!"
+// // }
+// // }
 
-// console.log(bald('/---------'))
-// console.log(bald('/-----/-'))
-// console.log(bald('--/--/---/-/---'))
+// // console.log(bald('/---------'))
+// // console.log(bald('/-----/-'))
+// // console.log(bald('--/--/---/-/---'))
 
 
 
@@ -483,25 +483,78 @@
 //   console.log(whatday(3))
 //   console.log(whatday(8))
 
-  function enough(cap, on, wait) {
-    if(on + wait< cap){
-        return 0
-    }else{
-        return (on + wait) - cap
-    }
-  }
+//   function enough(cap, on, wait) {
+//     if(on + wait< cap){
+//         return 0
+//     }else{
+//         return (on + wait) - cap
+//     }
+//   }
 
-  console.log(enough(10, 5, 5))
-  console.log(enough(100, 60, 50))
+//   console.log(enough(10, 5, 5))
+//   console.log(enough(100, 60, 50))
 
 
   
-  function check(a,x){
-  for(let i = 0; i < a.length; i++){
-      if(a[i] === x){
-          return true
-      }
+//   function check(a,x){
+//   for(let i = 0; i < a.length; i++){
+//       if(a[i] === x){
+//           return true
+//       }
+//   }
+//   return false
+// }
+// check([65,44],65)//?
+
+// function sumStr(a,b) {
+//     return  Number(a) + Number(b) + ''
+// }
+// sumStr("4","5")//?
+// sumStr("34","5")//?
+
+// const isReallyNaN = (val) => {
+//     if(parseFloat(val)){
+//     return true
+//     }
+//     return false
+//   };
+
+//   isReallyNaN(37)//?
+//   isReallyNaN('37')//?
+//   isReallyNaN(NaN)//?
+//   isReallyNaN(undefined)//?
+
+
+// function integrate(coefficient, exponent) {
+  
+// }
+// integrate(3,2)//?
+// integrate(9,5)//?
+
+
+function sameFrequency(num, num1){
+    //convert num to strings
+    let strNum1 = num.toString()
+    let strNum2 = num1.toString()
+    if (strNum1.length !== strNum2.length) return false;
+    //counter
+    let countNum1 = {}
+    let countNum2 = {}
+
+   for (let i = 0; i < strNum1.length; i++) {
+        countNum1[strNum1[i]] = (countNum1[strNum1[i]] || 0) + 1
+    }
+
+    for (let j = 0; j < strNum1.length; j++) {
+      countNum2[strNum2[j]] = (countNum2[strNum2[j]] || 0) + 1
+    }
+    for (let key in countNum1) {
+      if (countNum1[key] !== countNum2[key]) return false;
+    }
+    return true
   }
-  return false
-};
-    check([65,44],65)//?
+sameFrequency(182,281) //?  
+sameFrequency(34,14)//? 
+sameFrequency(3589578,5879385)//? 
+sameFrequency(22,222)//?
+
