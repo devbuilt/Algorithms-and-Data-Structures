@@ -648,3 +648,49 @@ function reverseRecursive(str){
 }
 reverseRecursive('awesome')//?
 reverseRecursive('rithmschool')//?
+
+
+function isPalindrone(str){
+  let newStr = str.split('').reverse().join('')
+  return newStr === str
+}
+isPalindrone('awesome')//?
+isPalindrone('tacocat')//?
+
+function someRecursive(str){
+let newStr = str.length + 1
+return newStr % 2 !== 0
+}
+someRecursive([1,2,3,4])//?
+someRecursive([4,6,8])//?
+
+function flatten(num){
+  // add whatever parameters you deem necessary - good luck!
+  return num.reduce((total,amount)=>{
+      return total.concat(amount)
+  },[])
+}
+
+flatten([1, 2, 3, [4, 5] ])//?
+flatten([1, [2, [3, 4], [[5]]]])//?
+
+
+
+// 0(n)
+function addUpTo(n){
+  let total = 0;
+  for(let i = 0; i <= n; i++){
+    total += i
+  }
+  return total
+}
+addUpTo(5)//?
+// 1+2 = 3 + 3 = 6 + 4 = 10 + 5 = 15 + 6 = 21 + 7 = 28 + 8 = 36 + 9 = 45 + 10 = 55
+
+//0(1)
+function addUpTo1(n){
+  return n * (n + 1) / 2
+}
+addUpTo1(5)//?
+
+

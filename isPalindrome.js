@@ -6,7 +6,7 @@ returns false
  */
 function isPalindrome(str){
     
-    let newStr = str.split('').reverse().join('')
+let newStr = str.split('').reverse().join('')
 
 return newStr === str;
 }

@@ -10,7 +10,7 @@ of arrays and returns a new array with all values flatten
             newArr = newArr.concat(flatten(oldArr[i]))
       } else {
             newArr.push(oldArr[i])
-      }
+            }
       } 
       return newArr;
  }
@@ -21,5 +21,4 @@ of arrays and returns a new array with all values flatten
  console.log(flatten([[1],[2],[3]])) // [1,2,3]))
  console.log(flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]])) //[1,2,3]
 
- let arrTest = [1,2,3,4]
-console.log(Array.isArray(arrTest));
+
