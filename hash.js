@@ -15,9 +15,13 @@
 // refactored
 
 function hash(key, arraylen){
+    
     let total = 0;
+    //store the total
     let WEIRD_PRIME = 31;
+    //prime number starts at 31
     for(let i = 0; i < Math.min(key.length, 100); i++){
+        //loop through
         let char = key[i];
         let value = char.charCodeAt(0) - 96
         total = (total * WEIRD_PRIME + value) % arraylen;
