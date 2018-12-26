@@ -23,7 +23,9 @@ function hash(key, arraylen){
     for(let i = 0; i < Math.min(key.length, 100); i++){
         //loop through
         let char = key[i];
+        // variable to check key
         let value = char.charCodeAt(0) - 96
+        // subtract from key
         total = (total * WEIRD_PRIME + value) % arraylen;
     }
     return total
