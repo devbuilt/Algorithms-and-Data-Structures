@@ -532,29 +532,105 @@
 // integrate(9,5)//?
 
 
-function sameFrequency(num, num1){
-    //convert num to strings
-    let strNum1 = num.toString()
-    let strNum2 = num1.toString()
-    if (strNum1.length !== strNum2.length) return false;
-    //counter
-    let countNum1 = {}
-    let countNum2 = {}
+// function sameFrequency(num, num1){
+//     //convert num to strings
+//     let strNum1 = num.toString()
+//     let strNum2 = num1.toString()
+//     if (strNum1.length !== strNum2.length) return false;
+//     //counter
+//     let countNum1 = {}
+//     let countNum2 = {}
 
-   for (let i = 0; i < strNum1.length; i++) {
-        countNum1[strNum1[i]] = (countNum1[strNum1[i]] || 0) + 1
-    }
+//    for (let i = 0; i < strNum1.length; i++) {
+//         countNum1[strNum1[i]] = (countNum1[strNum1[i]] || 0) + 1
+//     }
 
-    for (let j = 0; j < strNum1.length; j++) {
-      countNum2[strNum2[j]] = (countNum2[strNum2[j]] || 0) + 1
-    }
-    for (let key in countNum1) {
-      if (countNum1[key] !== countNum2[key]) return false;
-    }
-    return true
+//     for (let j = 0; j < strNum1.length; j++) {
+//       countNum2[strNum2[j]] = (countNum2[strNum2[j]] || 0) + 1
+//     }
+//     for (let key in countNum1) {
+//       if (countNum1[key] !== countNum2[key]) return false;
+//     }
+//     return true
+//   }
+
+// sameFrequency(182,281) //?  
+// sameFrequency(34,14)//? 
+// sameFrequency(3589578,5879385)//? 
+// sameFrequency(22,222)//?
+
+function sumRange(num){
+  if(num === 1) return 1
+  return num + sumRange(num - 1)
+}
+sumRange(4)//?
+
+function factorial(num){
+  let total = 1;
+  for(let i = num; i > 1; i--){
+    total *= i
   }
-sameFrequency(182,281) //?  
-sameFrequency(34,14)//? 
-sameFrequency(3589578,5879385)//? 
-sameFrequency(22,222)//?
+  return total
+}
+factorial(3)//?
 
+function factorialRec(num){
+  if(num === 0) return 1;
+  return num * factorial(num-1)
+}
+factorialRec(3)//?
+
+function odd(value){
+  let result = [];
+  for(let i = 0; i < value.length; i++){
+    if(value[i] % 2 !== 0){
+      result.push(value[i])
+    }
+  }
+  return result;
+}
+odd([4,5,6,7,8,8,9,10,11])//?
+
+//recursion
+function oddRecursion(values){
+  let newArr = [];
+  if(values.length === 0){
+    return newArr;
+  }
+  if(values[0] % 2 !== 0){
+    newArr.push(values[0])
+  }
+    newArr = newArr.concat(oddRecursion(values.slice(1)))
+    return newArr
+}
+oddRecursion([1,2,3,4,5,6,7,])//?
+
+function power(base, exponent){
+if(exponent === 0) return 1
+return base * power(base,exponent - 1)
+}
+power(2,0)//?
+power(2,2)//?
+
+function productOfArray(num){
+return num.reduce((total,amount) => total + amount)
+
+}
+
+productOfArray([1,2,3])//?
+productOfArray([1,2,3,10])//?
+
+function recursiveRange(x){
+  if(x === 0) return 0;
+  return x + recursiveRange(x-1)
+}
+recursiveRange(10)//?
+
+function fib(num){
+if(num <= 2) return 1
+return fib(num -1) + fib(num -2)
+}
+
+fib(4)//?
+fib(10)//?
+fib(28)//?
