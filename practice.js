@@ -628,9 +628,23 @@ recursiveRange(10)//?
 
 function fib(num){
 if(num <= 2) return 1
-return fib(num -1) + fib(num -2)
+return fib(num-1) + fib(num-2)
 }
 
 fib(4)//?
 fib(10)//?
 fib(28)//?
+
+function reverse(num){
+let newstr = num.split('').reverse().join('')
+return newstr
+}
+reverse('awesome')//?
+reverse('rithmschool')//?
+
+function reverseRecursive(str){
+  if(str.length <= 1) return str
+  return reverseRecursive(str.slice(1)) + str[0]
+}
+reverseRecursive('awesome')//?
+reverseRecursive('rithmschool')//?
