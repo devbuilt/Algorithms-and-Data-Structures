@@ -857,3 +857,12 @@ function taxicab(n) {
   return results.sort((a,b)=> a-b);
 }
 taxicab([10])//?
+
+function counter(num){
+  let count = 0;
+  for(let i = 1; i <= num; i++){
+   count += i
+  }
+  return count;
+}
+counter(10)//?
