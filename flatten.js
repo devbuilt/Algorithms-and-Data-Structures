@@ -12,7 +12,7 @@ of arrays and returns a new array with all values flatten
             newArr.push(oldArr[i])
             }
       } 
-      return newArr;
+      return newArr.sort();
  }
 
  console.log(flatten([1,2,3]))

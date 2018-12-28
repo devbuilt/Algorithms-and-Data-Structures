@@ -559,138 +559,301 @@
 // sameFrequency(3589578,5879385)//? 
 // sameFrequency(22,222)//?
 
-function sumRange(num){
-  if(num === 1) return 1
-  return num + sumRange(num - 1)
-}
-sumRange(4)//?
+// function sumRange(num){
+//   if(num === 1) return 1
+//   return num + sumRange(num - 1)
+// }
+// sumRange(4)//?
 
-function factorial(num){
-  let total = 1;
-  for(let i = num; i > 1; i--){
-    total *= i
-  }
-  return total
-}
-factorial(3)//?
+// function factorial(num){
+//   let total = 1;
+//   for(let i = num; i > 1; i--){
+//     total *= i
+//   }
+//   return total
+// }
+// factorial(3)//?
 
-function factorialRec(num){
-  if(num === 0) return 1;
-  return num * factorial(num-1)
-}
-factorialRec(3)//?
+// function factorialRec(num){
+//   if(num === 0) return 1;
+//   return num * factorial(num-1)
+// }
+// factorialRec(3)//?
 
-function odd(value){
-  let result = [];
-  for(let i = 0; i < value.length; i++){
-    if(value[i] % 2 !== 0){
-      result.push(value[i])
+// function odd(value){
+//   let result = [];
+//   for(let i = 0; i < value.length; i++){
+//     if(value[i] % 2 !== 0){
+//       result.push(value[i])
+//     }
+//   }
+//   return result;
+// }
+// odd([4,5,6,7,8,8,9,10,11])//?
+
+// //recursion
+// function oddRecursion(values){
+//   let newArr = [];
+//   if(values.length === 0){
+//     return newArr;
+//   }
+//   if(values[0] % 2 !== 0){
+//     newArr.push(values[0])
+//   }
+//     newArr = newArr.concat(oddRecursion(values.slice(1)))
+//     return newArr
+// }
+// oddRecursion([1,2,3,4,5,6,7,])//?
+
+// function power(base, exponent){
+// if(exponent === 0) return 1
+// return base * power(base,exponent - 1)
+// }
+// power(2,0)//?
+// power(2,2)//?
+
+// function productOfArray(num){
+// return num.reduce((total,amount) => total + amount)
+
+// }
+
+// productOfArray([1,2,3])//?
+// productOfArray([1,2,3,10])//?
+
+// function recursiveRange(x){
+//   if(x === 0) return 0;
+//   return x + recursiveRange(x-1)
+// }
+// recursiveRange(10)//?
+
+// function fib(num){
+// if(num <= 2) return 1
+// return fib(num-1) + fib(num-2)
+// }
+
+// fib(4)//?
+// fib(10)//?
+// fib(28)//?
+
+// function reverse(num){
+// let newstr = num.split('').reverse().join('')
+// return newstr
+// }
+// reverse('awesome')//?
+// reverse('rithmschool')//?
+
+// function reverseRecursive(str){
+//   if(str.length <= 1) return str
+//   return reverseRecursive(str.slice(1)) + str[0]
+// }
+// reverseRecursive('awesome')//?
+// reverseRecursive('rithmschool')//?
+
+
+// function isPalindrone(str){
+//   let newStr = str.split('').reverse().join('')
+//   return newStr === str
+// }
+// isPalindrone('awesome')//?
+// isPalindrone('tacocat')//?
+
+// function someRecursive(str){
+// let newStr = str.length + 1
+// return newStr % 2 !== 0
+// }
+// someRecursive([1,2,3,4])//?
+// someRecursive([4,6,8])//?
+
+// function flatten(num){
+//   // add whatever parameters you deem necessary - good luck!
+//   return num.reduce((total,amount)=>{
+//       return total.concat(amount)
+//   },[])
+// }
+
+// flatten([1, 2, 3, [4, 5] ])//?
+// flatten([1, [2, [3, 4], [[5]]]])//?
+
+
+
+// // 0(n)
+// function addUpTo(n){
+//   let total = 0;
+//   for(let i = 0; i <= n; i++){
+//     total += i
+//   }
+//   return total
+// }
+// addUpTo(5)//?
+// // 1+2 = 3 + 3 = 6 + 4 = 10 + 5 = 15 + 6 = 21 + 7 = 28 + 8 = 36 + 9 = 45 + 10 = 55
+
+// //0(1)
+// function addUpTo1(n){
+//   return n * (n + 1) / 2
+// }
+// addUpTo1(5)//?
+
+
+function hasPairWithSum(data,target){
+let sums = [];
+for(let i = 0; i < data.length; i++){
+  for(let j = i + 1; j < data.length; j++){
+    if(data[i] + data[j] === target){
+      sums.push([data[i], data[j]])//?
+      return true
     }
   }
-  return result;
 }
-odd([4,5,6,7,8,8,9,10,11])//?
+return false
+}
+// find the pair that will sum 8 
+hasPairWithSum([1,2,3,9], 8)//?
+hasPairWithSum([1,3,4,4], 8)//?
 
-//recursion
-function oddRecursion(values){
-  let newArr = [];
-  if(values.length === 0){
-    return newArr;
+
+function findDuplicateString(str){
+for(let i = 0; i < str.length; i++){
+  for(let j = i + 1; j < str.length; j++)
+    if(str[i] === str[j]){
+      return true
+    }
   }
-  if(values[0] % 2 !== 0){
-    newArr.push(values[0])
+  return false
+}
+findDuplicateString("AABBCBC")//?
+findDuplicateString("ABCDEFG")//?
+
+
+function Node(data, next) {
+  this.data = data;
+  this.next = next;
+} 
+
+function merge(L1, L2) {
+  
+  // create new linked list pointer
+  var L3 = new Node(null, null);
+  var prev = L3;
+  
+  // while both linked lists are not empty
+  while (L1 !== null && L2 !== null) {
+    if (L1.data <= L2.data) { 
+      prev.next = L1;
+      L1 = L1.next;
+    } else {
+      prev.next = L2;
+      L2 = L2.next;
+    }
+    prev = prev.next;
   }
-    newArr = newArr.concat(oddRecursion(values.slice(1)))
-    return newArr
-}
-oddRecursion([1,2,3,4,5,6,7,])//?
-
-function power(base, exponent){
-if(exponent === 0) return 1
-return base * power(base,exponent - 1)
-}
-power(2,0)//?
-power(2,2)//?
-
-function productOfArray(num){
-return num.reduce((total,amount) => total + amount)
-
+  
+  // once we reach end of a linked list, append the other 
+  // list because we know it is already sorted
+  if (L1 === null) { prev.next = L2; }
+  if (L2 === null) { prev.next = L1; }
+  
+  // return the sorted linked list
+  return L3.next;
+  
 }
 
-productOfArray([1,2,3])//?
-productOfArray([1,2,3,10])//?
+// create first linked list: 1 -> 3 -> 10
+var n3 = new Node(10, null);
+var n2 = new Node(3, n3);
+var n1 = new Node(1, n2);
+var L1 = n1; 
 
-function recursiveRange(x){
-  if(x === 0) return 0;
-  return x + recursiveRange(x-1)
-}
-recursiveRange(10)//?
+// create second linked list: 5 -> 6 -> 9
+var n6 = new Node(9, null);
+var n5 = new Node(6, n6);
+var n4 = new Node(5, n5);
+var L2 = n4; 
 
-function fib(num){
-if(num <= 2) return 1
-return fib(num-1) + fib(num-2)
-}
+merge(L1, L2); //?
 
-fib(4)//?
-fib(10)//?
-fib(28)//?
+function flattenAndSort(array) {
+  var newArr = []
+  for(var i = 0; i < array.length; i++){
+    if(Array.isArray(array[i])){
+          newArr = newArr.concat(flattenAndSort(array[i]))
+    } else {
+          newArr.push(array[i])
+          }
+    } 
+    // function sortNumber(a,b){
+    //   return a-b
+    // }
 
-function reverse(num){
-let newstr = num.split('').reverse().join('')
-return newstr
-}
-reverse('awesome')//?
-reverse('rithmschool')//?
+    // return newArr.sort(sortNumber);
 
-function reverseRecursive(str){
-  if(str.length <= 1) return str
-  return reverseRecursive(str.slice(1)) + str[0]
-}
-reverseRecursive('awesome')//?
-reverseRecursive('rithmschool')//?
-
-
-function isPalindrone(str){
-  let newStr = str.split('').reverse().join('')
-  return newStr === str
-}
-isPalindrone('awesome')//?
-isPalindrone('tacocat')//?
-
-function someRecursive(str){
-let newStr = str.length + 1
-return newStr % 2 !== 0
-}
-someRecursive([1,2,3,4])//?
-someRecursive([4,6,8])//?
-
-function flatten(num){
-  // add whatever parameters you deem necessary - good luck!
-  return num.reduce((total,amount)=>{
-      return total.concat(amount)
-  },[])
-}
-
-flatten([1, 2, 3, [4, 5] ])//?
-flatten([1, [2, [3, 4], [[5]]]])//?
-
-
-
-// 0(n)
-function addUpTo(n){
-  let total = 0;
-  for(let i = 0; i <= n; i++){
-    total += i
+    return newArr.sort((a,b) => a-b)
   }
-  return total
+
+  flattenAndSort([[3, 2, 1,200], [7, 9, 8], [6, 4, 5]])//?
+
+// javascript methods
+
+function replicate(times, number) {
+let newArr = []
+  for (let i = 0; i < times; i++){
+    newArr.push(number)//?
+  }
+return newArr//?
+// return Array(times).fill(number)
+
 }
-addUpTo(5)//?
-// 1+2 = 3 + 3 = 6 + 4 = 10 + 5 = 15 + 6 = 21 + 7 = 28 + 8 = 36 + 9 = 45 + 10 = 55
+replicate(3,5)//?
+replicate(0,12)//?
+replicate(8,0)//?
 
-//0(1)
-function addUpTo1(n){
-  return n * (n + 1) / 2
+function repeatString(str,num){
+  return Array(num).fill(str)
 }
-addUpTo1(5)//?
+repeatString('hello', 2);//?
+
+function linearSearch(num, target){
+  for(let i = 0; i < num.length; i++){
+   if(num[i] === target) return true
+  }
+  return -1
+}
+
+linearSearch([1,2,3,4,5,6])//?
 
 
+function taxicab(n) {
+  let a = 1, b = 1, c = 1, d = 1,
+  cubeA = a**3 + b**3,
+  cubeB = c**3 + d**3,
+  results = [];
+
+  while (cubeA < n) { // loop over a
+    while (cubeA < n) { // loop over b
+      // avoid running nested loops if this number is already in results
+      if (results.indexOf(cubeA) === -1) {
+       while (cubeB <= cubeA) { // loop over c
+        while (cubeB <= cubeA) { // loop over d
+          if (cubeB === cubeA && a!=c && a!=d) { // found a taxicab number!
+            results.push(cubeA);
+          }
+          d++;
+          cubeB = c**3 + d**3;
+        } // end loop over d
+        c++;
+        d = c;
+        cubeB = c**3 + d**3;
+       } // end loop over c
+      }
+      b++;
+      cubeA = a**3 + b**3;
+      c = d = 1;
+      cubeB = c**3 + d**3;
+    } // end loop over d
+    a++;
+    b = a;
+    cubeA = a**3 + b**3;
+  } // end loop over a
+
+  return results.sort((a,b)=> a-b);
+}
+taxicab([10])//?
