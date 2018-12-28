@@ -40,7 +40,7 @@ class binarySearchTree {
     contains(value){
         if(this.root === null) return false;
         let current = this.root;
-            found = false
+            found = false;
         while(current && !found){
             if(value < current.value){
                 current = current.left
@@ -50,7 +50,7 @@ class binarySearchTree {
             return true;
         }
     }
-    return false
+    return false;
     }
 }
 let tree = new binarySearchTree();//?
@@ -60,4 +60,4 @@ tree.insert(13);//?
 tree.insert(11);//?
 tree.insert(2);//?
 tree.insert(16);//?
-tree.insert(7)//?
+tree.insert(7);//?
