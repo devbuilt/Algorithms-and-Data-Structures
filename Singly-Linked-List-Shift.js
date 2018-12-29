@@ -135,6 +135,7 @@ list.push(201)//?
 list.push(250)//?
 list.push(350)//?
 list.push(999)//?
+list.push(1000)//?
 list.print()//?
 list.reverse()//?
 list.print()//?
