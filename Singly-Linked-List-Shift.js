@@ -123,7 +123,7 @@ class SinglyLinkedList{
             arr.push(current.val)
             current = current.next
         }
-        arr;//?
+       return arr;//?
     }
 
 }
