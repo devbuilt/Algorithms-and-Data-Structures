@@ -20,5 +20,3 @@ function capitalizeWords(str){
   return res;
  }
  capitalizeWords(['i', 'am', 'learning', 'recursion'])//?
-
-
