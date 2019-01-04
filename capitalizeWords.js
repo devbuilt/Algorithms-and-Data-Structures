@@ -26,12 +26,12 @@ function capitalizeWords(str){
   if (str.length === 1) {
     return [str[0].toUpperCase()];
   }
-  return newFunction(str);
+  return capFunction(str);
  }
 
  capitalizeWords(['i', 'am', 'learning', 'recursion'])//?
 
-function newFunction(str) {
+function capFunction(str) {
   let result = capitalizeWords(str.slice(0, -1));
   result.push(str.slice(str.length - 1)[0].toUpperCase());
   return result;
