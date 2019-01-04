@@ -20,6 +20,8 @@ function capitalizeWords(str){
  }
  capitalizeWords(['i', 'am', 'learning', 'recursion'])//?
 
+
+ // recursive solution global scope
  function capitalizeWords(str){
   if (str.length === 1) {
     return [str[0].toUpperCase()];
