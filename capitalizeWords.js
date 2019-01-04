@@ -10,6 +10,7 @@ function capitalizeWords(str){
  console.log(capitalizeWords(['i', 'am', 'learning', 'recursion']))
 
  // recursive solution
+ // let/const
  function capitalizeWords(str){
   if (str.length === 1) {
     return [str[0].toUpperCase()];
@@ -17,7 +18,7 @@ function capitalizeWords(str){
   return newFunction();
 
    function newFunction() {
-     const res = capitalizeWords(str.slice(0, -1));
+     let res = capitalizeWords(str.slice(0, -1));
      res.push(str.slice(str.length - 1)[0].toUpperCase());
      return res;
    }
