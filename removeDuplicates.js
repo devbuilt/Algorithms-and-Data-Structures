@@ -1,21 +1,17 @@
 function solve(arr){
     
-    let sortedArr = arr.slice().sort() //?
+    // let sortedArr = arr.slice().sort() //?
     
-    let result = [] //?
-    for(let i = 0; i < arr.length; i++){
-    if(sortedArr[i+ 1] !== sortedArr[i])
-    result.push(sortedArr[i])//?
-    }
-    return result//?
+    // let result = [] //?
+    // for(let i = 0; i < arr.length; i++){
+    // if(sortedArr[i + 1] !== sortedArr[i])
+    // result.push(sortedArr[i])//?
+    // }
+    // return result//?
 
-
-//    let sortedArr = arr;
-//   return arr = [...new Set(arr)]
-
-// var result = Array.from(new Set(arr));
-//   return result    
-
+    return arr.some(function() {
+        return array.indexOf(value, index + 1) !== -1;
+        });
 }
 solve([3,4,4,3,6,3])//?
 solve([1,2,1,2,1,2,3])//?
