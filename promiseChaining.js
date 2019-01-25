@@ -15,4 +15,8 @@ promise.then(function(data){
 }).then(function(data){
     console.log("Second random int passed to resolve:", 
     data)
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> a979e864312f636c69ba0c5eaad490ac4a265ac5
